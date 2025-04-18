@@ -1,3 +1,4 @@
+
 "use client"
 import { FaDiscord, FaXTwitter, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa6";
 
@@ -9,9 +10,9 @@ const Footer = () => {
 
   return (
     <footer className="footer mt-32 text-white p-4">
-      <div className="flex justify-between items-center">
-        <img src="/gdg_logo.png" alt="Logo" className="footerLogo" style={{ marginLeft: '2cm' }} />
-        <div className="social flex" style={{ marginRight: '2.0cm', gap: '0.7cm' }}>
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <img src="/gdg_logo.png" alt="Logo" className="w-40 h-auto sm:ml-10" />
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           <a href="https://www.linkedin.com/in/gdscmitwpu/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={24} className="text-gray-400" />
           </a>
@@ -21,7 +22,7 @@ const Footer = () => {
           <a href="https://x.com/gdgmitwpu" target="_blank" rel="noopener noreferrer">
             <FaXTwitter size={24} className="text-gray-400" />
           </a>
-          <a onClick={copyToClipboard} style={{ cursor: 'pointer' }}>
+          <a onClick={copyToClipboard} className="cursor-pointer">
             <FaEnvelope size={24} className="text-gray-400" />
           </a>
           <a href="https://discord.gg/VYPupwcU" target="_blank" rel="noopener noreferrer">
@@ -29,8 +30,8 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="mt-4">
-        <span>&copy; {new Date().getFullYear()} GDG MITWPU</span>
+      <div className="mt-4 text-center text-sm text-gray-400">
+        &copy; {new Date().getFullYear()} GDG MITWPU
       </div>
     </footer>
   );

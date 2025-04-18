@@ -24,8 +24,9 @@ body {
 }
 
 .footerLogo {
-  width: 5.3cm;
-  height: 2.8cm;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
   transition: filter 0.3s ease;
 }
 
@@ -90,11 +91,12 @@ body {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  max-width: calc(100% - 8cm);
-  max-height: calc(100% - 8cm);
+  max-width: 100%;
+  max-height: calc(100% - 4rem);
   overflow-y: auto;
   color: white;
   position: relative;
+  margin: 0 1rem;
 }
 
 .popup-header {
